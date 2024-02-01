@@ -1,0 +1,261 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Buy_Medicines" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Email" Type="InArgument(x:String)" />
+    <x:Property Name="argument1" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="Email" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>834.4,3213.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Buy_Medicines_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Buy_Medicines" sap:VirtualizedContainerService.HintSize="547.2,3148.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Product" />
+      <Variable x:TypeArguments="x:String" Name="pwd" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="ss:SecureString" Name="pass" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DtExtracted" />
+      <Variable x:TypeArguments="x:String" Name="username" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dttable1" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="484.8,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter Email">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[Email]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="484.8,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter product name or symptoms">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[Product]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: Online Medical Store, Online Medicine Order, Fastest Delivery - Apollo Pharmacy" sap:VirtualizedContainerService.HintSize="484.8,895.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" ScopeGuid="c7765352-8209-4a1c-9fac-2814ad7baafb" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,678.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="387.2,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2461cf12-fd8b-4139-aa8a-2953bcd5e337" InformativeScreenshot="08ad414e1dc1db06aafb9752e050c798" Selector="&lt;webctrl id='searchProduct' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT searchProduct'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c7765352-8209-4a1c-9fac-2814ad7baafb" Text="[Product]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.apollopharmacy.in/?utm_source=google&amp;utm_medium=srnb&amp;campaignid=10243622297&amp;adgroupid=136559919962&amp;keyword=apollo%2024%207&amp;device=c&amp;adtype=&amp;product_id=&amp;utm_campaign=Apollo_Branding_Services_RestCities&amp;utm_content=Apollo_247_PM&amp;gad_source=1&amp;gclid=Cj0KCQiA-62tBhDSARIsAO7twbbU31jaUi1pExyebntA9UFO7ruzdxJH1zi5P92IR6cPCHgv0ZOgDyIaApLUEALw_wcB" CvElementArea="380, 258, 1064, 64" CvType="InputBox" DesignTimeRectangle="407, 279, 1013, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT searchProduct'" FullSelectorArgument="&lt;webctrl id='searchProduct' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchProduct' tag='INPUT' type='' class='   &amp;#xA;         &amp;#xA;        ' aaname='' /&gt;" Guid="f90e19b0-3e02-4e81-a2df-7d06e8b6c818" InformativeScreenshot="64d51fa57e09297d7f1ddab6f3d2ff30.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Online Medical Store, Online Medicine Order, Fastest Delivery - Apollo Pharmacy' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View All Results'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c7765352-8209-4a1c-9fac-2814ad7baafb" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.apollopharmacy.in/?utm_source=google&amp;utm_medium=srnb&amp;campaignid=10243622297&amp;adgroupid=136559919962&amp;keyword=apollo%2024%207&amp;device=c&amp;adtype=&amp;product_id=&amp;utm_campaign=Apollo_Branding_Services_RestCities&amp;utm_content=Apollo_247_PM&amp;gad_source=1&amp;gclid=Cj0KCQiA-62tBhDSARIsAO7twbbU31jaUi1pExyebntA9UFO7ruzdxJH1zi5P92IR6cPCHgv0ZOgDyIaApLUEALw_wcB" CvElementArea="714, 915, 399, 57" CvTextArea="843, 935, 139, 16" CvTextArgument="View All Results" CvType="Button" DesignTimeRectangle="847, 933, 135, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'View All Results'" FullSelectorArgument="&lt;webctrl parentid='mainContainerCT' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='mainContainerCT' tag='SPAN' type='' class='' aaname='View All Results' check:innerText='View All Results' /&gt;" Guid="41169138-7f90-4669-995c-cc78cfc64887" InformativeScreenshot="20d3dd3b21b6fcd0c93623a518aeb950.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Online Medical Store, Online Medicine Order, Fastest Delivery - Apollo Pharmacy' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="714, 915, 399, 57" CvTextArea="843, 935, 139, 16" CvTextArgument="View All Results" CvType="Button" DesignTimeRectangle="718, 920, 393, 52" ElementType="Button" FriendlyName="'View All Results'" FullSelectorArgument="&lt;webctrl parentid='mainContainerCT' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='mainContainerCT' tag='BUTTON' type='' class='o_&amp;#xA;      &amp;#xA;      &amp;#xA;      MedicineAutoSearch_viewAllResultBtn__l0DzD&amp;#xA;      &amp;#xA;       &amp;#xA;      ' aaname='View All Results' check:innerText='View All Results' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Firefox" IconBase64="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" InformativeScreenshot="476a1de0671cd4644f515e5b1c028e53.png" Selector="&lt;html app='firefox.exe' title='Online Medical Store, Online Medicine Order, Fastest Delivery - Apollo Pharmacy' /&gt;" Title="Online Medical Store, Online Medicine Order, Fastest Delivery - Apollo Pharmacy" Url="https://www.apollopharmacy.in/?utm_source=google&amp;utm_medium=srnb&amp;campaignid=10243622297&amp;adgroupid=136559919962&amp;keyword=apollo%2024%207&amp;device=c&amp;adtype=&amp;product_id=&amp;utm_campaign=Apollo_Branding_Services_RestCities&amp;utm_content=Apollo_247_PM&amp;gad_source=1&amp;gclid=Cj0KCQiA-62tBhDSARIsAO7twbbU31jaUi1pExyebntA9UFO7ruzdxJH1zi5P92IR6cPCHgv0ZOgDyIaApLUEALw_wcB" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="484.8,489.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="60748ea9-29f6-4103-b7e4-0fd1e8d7efc2" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[DtExtracted]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='URL'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext' name2='Column3' attr2='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column css-selector='.ProductCard_priceGroup__4D4k0' name='Column2' attr='fulltext' /&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="723, 248, 974, 3050" DesignTimeScaleFactor="1.25" FriendlyName="'Benadryl Cough'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='__next' tag='DIV' /&gt;" Guid="6da61b49-378a-4b92-b3b2-eb589aaba293" InformativeScreenshot="2b159b43746af12af55536a98d8ed8ae.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='apollopharmacy.in/search-medicines/cough%20syrup' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Firefox" IconBase64="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" InformativeScreenshot="811e6f9e7fc78a2ee482ee7d6e74484f.png" Selector="&lt;html app='firefox.exe' title='apollopharmacy.in/search-medicines/cough-syrup' /&gt;" Title="apollopharmacy.in/search-medicines/cough-syrup" Url="https://www.apollopharmacy.in/search-medicines/cough-syrup" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[DtExtracted]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="484.8,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="YourProduct.xlsx" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dttable1]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="484.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="YourProduct.xlsx" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,352.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,274.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:FilterDataTable Filters="{x:Null}" OutputDataTable="{x:Null}" SelectColumns="{x:Null}" DataTable="[dttable1]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="387.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Remove" />
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Gmail" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Default" sap:VirtualizedContainerService.HintSize="484.8,143.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[pass]" Username="[username]" />
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="All the related products are listed below with there price and discount so just click on perticular product link that will redirect you to the product. Happy Shopping.. :)" DisplayName="Send SMTP Mail Message" Email="[username]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="484.8,148.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Port="465" SecureConnection="Auto" SecurePassword="[pass]" Server="smtp.gmail.com" Subject="This is an auto generated Email so Please do no reply to this mail." To="[Email]">
+      <ui:SendMail.Files>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String">C:\Users\nishi\OneDrive\Documents\UiPath\Health Assistant with apollopharmacy\YourProduct.xlsx</Literal>
+          </InArgument>
+        </scg:List>
+      </ui:SendMail.Files>
+    </ui:SendMail>
+  </Sequence>
+</Activity>

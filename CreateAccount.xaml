@@ -1,0 +1,201 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CreateAccount" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="email" Type="InArgument(x:String)" />
+    <x:Property Name="phone" Type="InArgument(x:String)" />
+    <x:Property Name="emailNew" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>834.4,1937.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>CreateAccount_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="CreateAccount" sap:VirtualizedContainerService.HintSize="641.6,1872.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="579.2,1760.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.timesjobs.com/">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="545.6,1635.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: Jobs Search | Recruitment | Employment | Job Vacancies | TimesJobs" sap:VirtualizedContainerService.HintSize="483.2,1523.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="24073fbe-c824-40cb-8727-554468bcc1e8" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1306.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="24073fbe-c824-40cb-8727-554468bcc1e8" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.timesjobs.com/" CvElementArea="1585, 159, 100, 38" CvTextArea="1599, 171, 71, 13" CvTextArgument="REGISTER" CvType="Button" DesignTimeRectangle="1588, 162, 96, 35" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Register'" FullSelectorArgument="&lt;webctrl aaname='Register' parentid='site' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Register' parentid='site' tag='A' type='' class='' check:innerText='REGISTER' /&gt;" Guid="d975141d-9b06-478c-9086-31e4d200822b" InformativeScreenshot="d13e7d0863814d90fe05e24d144be71f.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='null' title='Jobs Search | Recruitment | Employment | Job Vacancies | TimesJobs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Email Id'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="24073fbe-c824-40cb-8727-554468bcc1e8" Text="[email]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.timesjobs.com/candidate/register.html?pageFlow=TJ_HOME" CvElementArea="572, 318, 396, 39" CvType="InputBox" DesignTimeRectangle="574, 322, 392, 36" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT emailAdd'" FullSelectorArgument="&lt;webctrl id='emailAdd' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='emailAdd' tag='INPUT' type='' class='inpt-typ wdth_inpt' aaname='' /&gt;" Guid="fd7dcac2-8488-4f2b-9bcb-41a0d4d35d3b" InformativeScreenshot="6a3cef7d5d9e51c05e57081575bf31ad.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='null' title='Submit Resume Online | Post Your CV &amp;amp; Apply For Best Jobs Now - Timesjobs.com' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="491, 322, 69, 16" CvTextArgument="Email Id:" CvType="Text" DesignTimeRectangle="361, 322, 213, 19" ElementType="Text" FriendlyName="'Email Id'" FullSelectorArgument="&lt;webctrl id='emailid' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='emailid' tag='LABEL' type='' class='top' aaname='Email Id:' check:innerText='Email Id:' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="24073fbe-c824-40cb-8727-554468bcc1e8" Text="Pass@123" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.timesjobs.com/candidate/register.html?pageFlow=TJ_HOME" CvElementArea="573, 402, 378, 31" CvType="InputBox" DesignTimeRectangle="574, 405, 378, 29" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FriendlyName="'INPUT passwordField'" FullSelectorArgument="&lt;webctrl id='passwordField' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='passwordField' tag='INPUT' type='password' class='inpt_wd_ps inpt-typ wdth_inpt' aaname='' /&gt;" Guid="de78e370-ceeb-40b6-86e4-4321f7d7efa8" InformativeScreenshot="077d8a1bce9375df664e76bef810d443.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='null' title='Submit Resume Online | Post Your CV &amp;amp; Apply For Best Jobs Now - Timesjobs.com' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="477, 405, 83, 16" CvTextArgument="Password:" CvType="Text" DesignTimeRectangle="361, 405, 213, 19" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password:' tag='LABEL' type='' class='' check:innerText='Password:' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Confirm Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" IsPassword="True" ScopeIdentifier="24073fbe-c824-40cb-8727-554468bcc1e8" Text="Pass@123" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.timesjobs.com/candidate/register.html?pageFlow=TJ_HOME" CvElementArea="572, 484, 380, 32" CvType="InputBox" DesignTimeRectangle="574, 488, 378, 29" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FriendlyName="'INPUT retypePassword'" FullSelectorArgument="&lt;webctrl id='retypePassword' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='retypePassword' tag='INPUT' type='password' class='inpt_wd_ps inpt-typ wdth_inpt' aaname='' /&gt;" Guid="707aaf7f-90a8-42a8-b609-49c7c7bad33f" InformativeScreenshot="320661c4a622591a959cc6068da032d5.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='null' title='Submit Resume Online | Post Your CV &amp;amp; Apply For Best Jobs Now - Timesjobs.com' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="409, 487, 152, 17" CvTextArgument="Confirm Password:" CvType="Text" DesignTimeRectangle="361, 488, 213, 19" ElementType="Text" FriendlyName="'Confirm Password'" FullSelectorArgument="&lt;webctrl aaname='Confirm Password:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Confirm Password:' tag='LABEL' type='' class='' check:innerText='Confirm Password:' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Mobile No'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="24073fbe-c824-40cb-8727-554468bcc1e8" Text="[phone]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.timesjobs.com/candidate/register.html?pageFlow=TJ_HOME" CvElementArea="625, 532, 313, 32" CvType="InputBox" DesignTimeRectangle="627, 536, 310, 29" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT mobNumber'" FullSelectorArgument="&lt;webctrl id='mobNumber' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mobNumber' tag='INPUT' type='text' class='mobno fl inpt-typ' aaname='' /&gt;" Guid="3324afde-5bd0-4e66-be26-bc1908aae388" InformativeScreenshot="cc63be918e5b0600120fc748024b11c3.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='null' title='Submit Resume Online | Post Your CV &amp;amp; Apply For Best Jobs Now - Timesjobs.com' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="476, 537, 84, 16" CvTextArgument="Mobile No:" CvType="Text" DesignTimeRectangle="386, 538, 188, 19" ElementType="Text" FriendlyName="'Mobile No'" FullSelectorArgument="&lt;webctrl parentid='mobNoDiv' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='mobNoDiv' tag='LABEL' type='' class='stg2_mob' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Mobile No: &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='Mobile No:' /&gt;" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Firefox" IconBase64="AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A8fH9V7Ku+P/y8v0z////AP///wD///8A////AP///wD///8A////APn5+Qfw8PAU8PDwFPf3+BT///8A////ALKv+LUnHu3/d3Lz4O/u/CX///8A////AP///wD///8A////AP///wC8vLxtQEBD/0A/Q/+sq63/////AP///wBjXvG1IRjs/yEY7P+Ef/TW+vr9H////wD///8A////AP///wD///8AsrKzbSIhJf8cGx//o6Kk/////wD///8A1dP6nkxF8P8iGez/Myvu/9HP+r3///8A////AP///wD///8A////ALSztW0kIyb/Hx4i/6amp/////8A////AP7+/hHBvvnGHRTs/yAX7P+OivTa////AP///wD///8A////AP///wC0s7VtJCMm/yEgJP+srK1+////AP///wD///8A+vr+bjMr7v8gF+z/XVfw4/39/hn///8A////AP///wD///8AtLO1bSQjJv8hICT/ra2ubf///wD///8A////AP///wBNRvD/Ihns/0dA7//7+/5t////AP///wD///8A////ALSztW0kIyb/ISAk/62trm3///8A////AP///wD///8AaGHy/yEY7P9BOe//+vr+bf///wD///8A////AP///wC0s7VtJCMm/yEgJP+tra5t////AP///wD///8A////AGli8v8hGOz/QTnv//r6/m3///8A////AP///wD///8AtLO1bSQjJv8hICT/ra2ubf///wD///8A////AP///wBpYvL/IRjs/0E57//6+v5t////AP///wD///8A////ALSztW0kIyb/ISAk/62trm3///8A////AP///wD///8AaWLy/yEY7P9BOe//+vr+bf39/TP8/Px5/f39ef7+/nm0s7WzJCMm/yEgJP+srK2z/v7+ef39/Xn8/Px5/f39M15Y8f8hGOz/QTnv//r6/m29vb5tRENH/0lIS/9LSk3/PDs+/yAfI/8gHyP/Ojk9/05OUP9JSEv/SEdK/8nIyW1TTfD/IRjs/0A47//49/5tsbGybRwbH/8XFhr/FRQY/xYVGf8YFxv/GBcb/xYVGf8VFBj/FxYa/x8eIv+6urttU03w/xwT7P87M+7/9/f+bdTU1U2VlJa2mpqbtqKhoranp6i2p6eotqenqLanp6i2oqGitpqam7aZmJq24ODgTayp97aalva2p6T2tvv7/U3///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A/+8AAP/HAAD4wwAA+MEAAPjhAAD58QAA+fEAAPnxAAD58QAA+fEAAPnxAADw8QAAgBEAAIARAACAEQAA//8AAA==" InformativeScreenshot="d3640e5fb125a63e0831bd40e67c1900.png" Selector="&lt;html app='firefox.exe' htmlwindowname='null' title='Jobs Search | Recruitment | Employment | Job Vacancies | TimesJobs' /&gt;" Title="Jobs Search | Recruitment | Employment | Job Vacancies | TimesJobs" Url="https://www.timesjobs.com/" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>
